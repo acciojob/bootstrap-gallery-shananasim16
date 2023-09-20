@@ -3,52 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Compact Gallery</title>
-    <!-- Add Bootstrap CSS link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-
-<div class="container">
-    <h2 class="text-center">Cards Gallery</h2>
-
-    <div class="row">
-        <!-- Card 1 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-                <a href="Image1.jpg" data-toggle="lightbox" data-gallery="gallery" data-title="Description 1">
-                    <img src="Image1.jpg" class="card-img-top rounded" alt="Image 1">
-                </a>
-                <div class="card-body text-center">
-                    <h6 class="card-title">Card 1</h6>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="container mt-5">
+        <h2 class="text-center">Cards Gallery</h2>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <a href="Image1.jpg" data-toggle="lightbox" data-gallery="gallery">
+                        <img src="Image1.jpg" class="card-img-top" alt="Image 1">
+                    </a>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Card 1</h6>
+                        <p class="card-text">Description for Card 1</p>
+                    </div>
                 </div>
             </div>
+            <!-- Repeat the above card structure for the remaining images -->
         </div>
-
-        <!-- Repeat similar card structure for other images -->
-        <!-- Card 2 -->
-        <!-- Card 3 -->
-        <!-- Card 4 -->
-        <!-- Card 5 -->
-        <!-- Card 6 -->
     </div>
-</div>
 
-<!-- Add Bootstrap JS and Popper.js scripts for lightbox functionality -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-
-<!-- Initialize the lightbox -->
-<script>
-    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
-    });
-</script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
 </body>
 </html>
-
